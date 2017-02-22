@@ -45,6 +45,9 @@ trait ArrayTools
         if($error['error'] && $silent == false) {
             throw new \Exception($error["message"]);
         }
+
+        return $error['error'];
+
     }
 
     public static function encodeUTF8(array $array) : array {
@@ -284,9 +287,9 @@ trait ArrayTools
     public static function jsonTryToObject($param, $silent = true) {
         $result = json_decode($param);
 
-        self::getJsonErro($silent);
+        $hasError = self::getJsonErro($silent);
 
-        return $param;
+        return $hasError == true ? $param : $result;
     }
 
 }
