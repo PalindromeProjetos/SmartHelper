@@ -103,10 +103,6 @@ class MappingRouter implements MappingRouterInterface
                 if(isset($body[$param->getName()])) {
                     $modelClass = $param->getClass()->getName();
                     $bodyClass = self::jsonTryToObject($body[$param->getName()]);
-
-//                    print_r($bodyClass);
-//                    die;
-
                     $param->defaultValue = new $modelClass($bodyClass);
                 }
 
