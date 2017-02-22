@@ -1,0 +1,33 @@
+{
+
+    "require": {
+        "itbz/fpdf": "^1.7",
+        "endroid/qrcode": "^1.9",
+        "phpmailer/phpmailer": "^5.2",
+        "phpoffice/phpexcel": "^1.8",
+        "slim/slim": "^3.7",
+        "lcobucci/jwt": "^3.2"
+    },
+
+    "autoload": {
+
+        "files": [
+
+        ],
+
+        "classmap": [
+
+        ],
+
+        "psr-4": {
+            "Helper\\":"api/Api",
+            "SmartFull\\": "vendor/smartfull/SmartFull"
+        }
+
+    },
+
+    "scripts": {
+
+    }
+
+}
