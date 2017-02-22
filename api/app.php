@@ -2,8 +2,6 @@
 
 require '../vendor/autoload.php';
 
-print_r($_SERVER);
-
 $config = [
     'settings' => [
         'displayErrorDetails' => true,
