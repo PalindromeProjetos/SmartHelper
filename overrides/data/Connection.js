@@ -30,7 +30,8 @@ Ext.define( 'Ext.overrides.data.Connection', {
         options = options || {};
 
         options.headers = {
-            'Authorization': null,
+            'Authorization': '',
+            'Credential-Type' : Ext.manifest.appType,
             'Credential-Name' : 'Palindrome Projetos',
             'Credential-Auth' : Ext.util.Cookies.get('Credential-Auth'),
             'Credential-Code' : Ext.util.Cookies.get('Credential-Code'),

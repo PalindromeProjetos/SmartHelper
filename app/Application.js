@@ -23,6 +23,8 @@ Ext.define( 'SmartHelper.Application', {
             SmartHelper.appType = 'dev';
             document.cookie = 'XDEBUG_SESSION=PHPSTORM;path=/;';
         //</debug>
+
+        Ext.manifest.appType = SmartHelper.appType;
     }
 
 });

@@ -78,7 +78,9 @@ class App extends \Slim\App
         $this->$http("/$path", function (Request $request, Response $response) {
             $args    = array();
 
-            self::$controllers->hasRoutesConflict();
+            if($request->getHeader('Credential-Type') == 'dev') {
+                self::$controllers->hasRoutesConflict();
+            }
 
             $mapping = self::$controllers->hydratedRoute($request);
 
