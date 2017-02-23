@@ -38,7 +38,7 @@ class ActionBusiness extends Business
             )
             SELECT
                 *,
-				records = ( select count(id) from pager )
+				total = ( select count(id) from pager )
             FROM
                 pager
             WHERE rowindex BETWEEN @start AND @limit";
@@ -58,7 +58,7 @@ class ActionBusiness extends Business
 
             $rows = $pdo->fetchAll();
 
-            $records = (count($rows) != 0) ? $rows[0]['records'] : 0;
+            $records = (count($rows) != 0) ? $rows[0]['total'] : 0;
 
             $result->setRows($rows);
             $result->setRecords($records);

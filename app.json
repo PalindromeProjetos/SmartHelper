@@ -223,6 +223,9 @@
         {
             "path": "app.js",
             "bundle": true
+        }, {
+            "path": "library/vendor/jwt/jsrsasign-latest-all-min.js",
+			"remote": true
         }
     ],
 
@@ -546,8 +549,8 @@
 
         "modern": {
             "toolkit": "modern",
-            
-            "theme": "theme-triton",
+
+            "theme": "theme-material",
             
             "sass": {
                 "generated": {
